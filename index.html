@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+<style>
+    @font-face {
+        font-family: 'Hanken Grotesk';
+        src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+    }
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+        background-color: hsl(221, 100%, 96%);
+        font-family: 'Hanken Grotesk';
+    }
+
+    #results {
+        width: 50vw;
+        height: 50vh;
+        margin: 22vh 25vw;
+        background-color: #fff;
+        border-radius: 20px;
+    }
+    #results-total {
+        text-align: center;
+        display: inline-block;
+        width: 47%;
+        height: inherit;
+        border-radius: inherit;
+        background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+        color: #fff;
+    }
+    #total-title {
+        font-weight: 300;
+    }
+    #total-circle {
+        width: 12.5vw;
+        height: 12.5vw;
+        justify-self: center;
+        text-align: center;
+        border-radius: 50%;
+        background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    }
+    #total-score {
+        font-size: 5vw;
+        font-weight: 700;
+    }
+    #total-of {
+        font-size: 1vw;
+        font-weight: 500;
+    }
+    #total-word {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    #total-description {
+        font-size: 10px;
+        font-weight: 300;
+        padding: 0 5vw;
+    }
+
+    #results-summary {
+        display: inline-block;
+        width: calc(45% - 3vw);
+        padding: 2vh 2vw;
+    }
+    #summary-title {
+        display: block;
+        font-weight: 700;
+    }
+    .summary-wrapper {
+        margin: 2vh 0;
+        padding: .5vh 10px;
+        text-align: left;
+        border-radius: 10px;
+        text-wrap: nowrap;
+    }
+    .summary-wrapper label {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .summary-score {
+        font-weight: 600;
+    }
+    #summary-reaction {
+        background-color: hsla(0, 100%, 67%, 5%);
+    }
+    #summary-reaction label { color: hsl(0, 100%, 67%) }
+    #summary-memory {
+        background-color: hsla(39, 100%, 56%, 5%);
+    }
+    #summary-memory label { color: hsl(39, 100%, 56%) }
+    #summary-verbal {
+        background-color: hsla(166, 100%, 37%, 5%);
+    }
+    #summary-verbal label { color: hsl(166, 100%, 37%) }
+    #summary-visual {
+        background-color: hsla(234, 85%, 45%, 5%);
+    }
+    #summary-visual label { color: hsl(234, 85%, 45%) }
+
+    #summary-continue {
+        border-radius: 20px;
+        background-color: hsl(224, 30%, 27%);
+        width: 20vw;
+        padding: .5vh 10px;
+        align-self: center;
+        color: #fff;
+    }
+</style>
+</head>
+<body>
+    <div id="results">
+        <div id="results-total">
+            <p id="total-title">Your Result</p>
+            <div id="total-circle">
+                <span id="total-score">76</span>
+                <br>
+                <span id="total-of">of 100</span>
+            </div>
+
+            <span id="total-word">Great</span>
+            <p id="total-description">You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+
+        <div id="results-summary">
+            <span id="summary-title">Summary</span>
+
+            <div class="summary-wrapper" id="summary-reaction">
+                <img src="assets/images/icon-reaction.svg">
+                <label>Reaction</label>
+                <span class="summary-score">80</span><span class="outta-a-hundo"> / 100</span>
+            </div>
+
+            <div class="summary-wrapper" id="summary-memory">
+                <img src="assets/images/icon-memory.svg">
+                <label>Memory</label>
+                <span class="summary-score">92</span><span class="outta-a-hundo"> / 100</span>
+            </div>
+
+            <div class="summary-wrapper" id="summary-verbal">
+                <img src="assets/images/icon-verbal.svg">
+                <label>Verbal</label>
+                <span class="summary-score">61</span><span class="outta-a-hundo"> / 100</span>
+            </div>
+
+            <div class="summary-wrapper" id="summary-visual">
+                <img src="assets/images/icon-visual.svg">
+                <label>Visual</label>
+                <span class="summary-score">72</span><span class="outta-a-hundo"> / 100</span>
+            </div>
+ 
+            <button id="summary-continue">Continue</button>
+        </div>
+    </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
